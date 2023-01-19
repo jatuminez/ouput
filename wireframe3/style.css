@@ -1,0 +1,191 @@
+/* CSS Reset */
+* { margin: 0; padding: 0; border: 0; }
+
+body{
+	background-image: linear-gradient(rgba(0, 0, 0, .95), rgba(0, 0, 0, .95)), url('images/home-bg.jpg');
+    background-size: 100%;
+    background-attachment: fixed;
+}
+.wrapper {
+	font-family: arial;
+	width: 100%;
+}
+.heading {
+	display: flex;
+	justify-content: center;
+	background-color: orange;
+}
+.logo img {
+	width: 100px;
+	height: 50px;
+	margin: 13px;
+}
+.heading nav ul {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	padding: 30px;
+}
+nav ul li a {
+	text-decoration: none;
+	font-weight: bold;
+	padding: 10px;
+	color: white;
+}
+.contact-us {
+	position: relative;
+	padding: 20px 100px;
+	min-height: 70vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color: white;
+}
+.contact-us .content {
+	text-align: center;
+}
+.contact-us .content h2 {
+	font-size: 35px;
+	text-shadow:2px 2px 8px red;
+	margin-top: 20px;
+	padding-bottom: 10px;
+}
+.contact-us .content p {
+	font-weight: 300;
+	text-shadow:2px 2px 8px red;
+}
+.container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+}
+.container .contact-info {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+}
+.container .contact-info .box {
+	position: relative;
+	padding: 20px 0px;
+	display: flex;
+	align-items: center;
+}
+.container .contact-info .box .icon {
+	min-width: 60px;
+	height: 60px;
+	background: orange;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	font-size: 22px;
+	text-shadow:2px 2px 8px red;
+}
+.container .contact-info .box .text {
+	display: flex;
+	margin-left: 20px;
+	font-size: 16px;
+	flex-direction: column;
+	font-weight: 300;
+	text-shadow:2px 2px 8px red;
+}
+.container .contact-info .box .text h3 {
+	color: orange;
+	font-weight: 500;
+	text-shadow:2px 2px 8px red;
+}
+.contact-form {
+	width: 40%;
+	padding: 40px;
+	background: white;
+	color: black;
+}
+.contact-form h2{
+	font-size: 30px;
+	color: #333;
+	font-weight: 300;
+}
+.contact-form .input-box {
+	position: relative;
+	width: 100%;
+	margin-top: 10px;	
+}
+.contact-form .input-box input, .contact-form .input-box textarea{
+	width: 100%;
+	padding: 5px 0px;
+	font-size: 16px;
+	margin: 10px 0px;
+	border: none;
+	border-bottom: 2px solid #333;
+	outline: none;
+	resize: none;
+}
+.contact-form .input-box span {
+	position: absolute;
+	left: 0;
+	padding: 5px 0px;
+	font-size: 16px;
+	margin: 10px 0px;
+	pointer-events: none;
+	transition: 0.5s;
+	color: #666;
+}
+.contact-form .input-box input:focus ~ span, .contact-form .input-box input:valid ~ span,.contact-form .input-box textarea:focus ~ span, .contact-form .input-box textarea:valid ~ span {
+	color: #333;
+	font-size: 12px;
+	transform: translateY(-20px);
+}
+.contact-form .input-box input[type="submit"] {
+	width: 100px;
+	background: #333;
+	color: white;
+	border: none;
+	cursor: pointer;
+	padding: 10px;
+	font: 18px;
+}
+@media screen and (max-width: 991px) {
+	.container{
+		flex-direction: column;
+	}
+	.container .contact-info {
+		margin-bottom: 40px;
+	}
+	.container .contact-info, .contact-form {
+		width: 100%;
+	}
+}
+/*mobile device*/
+@media screen and (max-width: 500px) {
+	.heading {
+		text-align: center;
+		font-size: 8px;
+	}
+	.logo img {
+		width: 100px;
+		height: 50px;
+		margin: 10px;
+	}	
+	.heading nav ul {
+		padding: auto;
+	}
+	.contact-us {
+		padding: 20px 60px;
+	}
+	.contact-us .content h2 {
+		font-size: 25px;
+	}
+	.contact-us .content p {
+		font-size: 14px;
+	}
+	.container .contact-info .box .icon {
+		min-width: 40px;
+		height: 40px;
+	}
+	.container .contact-info .box .text {
+		font-size: 10px;
+	}
+}
